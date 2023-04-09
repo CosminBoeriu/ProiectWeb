@@ -1,0 +1,114 @@
+.white-text{
+    color: #FAFAFA;
+}
+.orange-text{
+    color: #FF7E67;
+}
+.blue-text{
+    color: #A2D5F2;
+}
+.big-text{
+    Font-family: "Helvetica Neue Helvetica, Arial,sans-serif";
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.medium-text{
+    Font-family: "Helvetica Neue Helvetica, Arial,sans-serif";
+    font-size: 1.5rem;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.small-text{
+    Font-family: "Helvetica Neue Helvetica, Arial,sans-serif";
+    font-size: 1rem;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.text-contaier{
+    margin: 0% 10% 0% 10%;
+    width: 80%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content-box{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    aspect-ratio: 4 / 1;
+    margin-left: 10%;
+    background-color: #07689F;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content-button{
+    display: block;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    background-color: #FF7E67;
+    aspect-ratio: 1/1;
+    width: auto;
+    height: 75%;
+}
+
+#id1990s::before{content: "1990's"; font-weight: 2rem; font-size: 2rem; color: Black; align-items: center; justify-content: center;}
+#id2000s::before{content: "2000's"; font-weight: 2rem; font-size: 2rem; color: Black; align-items: center; justify-content: center;}
+#id2010s::before{content: "2010's"; font-weight: 2rem; font-size: 2rem; color: Black; align-items: center; justify-content: center;}
+#id2020s::before{content: "2020's"; font-weight: 2rem; font-size: 2rem; color: Black; align-items: center; justify-content: center;}
+
+.content-button::before {
+    display: flex;
+    height: 100%;
+    width: 0%;
+    background-color: #FAFAFA;
+    visibility: hidden;
+    z-index: 2;
+    position: absolute;
+}
+
+.content-button:hover::before {
+    animation-duration: 1s;
+    animation-name: slide-hover;
+    visibility: visible;
+    animation-fill-mode: forwards;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+}
+
+.textover{
+    padding: 0% 5%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content-button:hover .textover{
+    margin-top: -100%;
+    margin-bottom: 0%;
+}
+
+@keyframes slide-hover {
+    0%{
+        opacity: 0%;
+        width: 0%;
+        height: 100%;
+    }
+    80%{
+        opacity: 40%;
+        height: 100%;
+    }
+    100%{
+        opacity: 75%;
+        width: 100%;
+        height: 100%;
+    }
+}
